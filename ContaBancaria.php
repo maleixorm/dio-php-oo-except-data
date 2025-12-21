@@ -2,11 +2,11 @@
 
 class ContaBancaria 
 {
-    public string $banco;
-    public string $nomeTitular;
-    public string $numeroAgencia;
-    public string $numeroConta;
-    public float $saldo;
+    private string $banco;
+    private string $nomeTitular;
+    private string $numeroAgencia;
+    private string $numeroConta;
+    private float $saldo;
 
     public function __construct(string $banco, string $nomeTitular, string $numeroAgencia, string $numeroConta, float $saldo)
     {
@@ -29,3 +29,5 @@ $conta = new ContaBancaria(
     '82.009-5',
     300.00
 );
+
+echo $conta->obterSaldo();
