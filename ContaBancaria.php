@@ -17,8 +17,21 @@ class ContaBancaria
         $this->saldo = $saldo;
     }
 
-    public function obterSaldo() {
-        return "Seu saldo é: R$ {$this->saldo}";
+    public function obterSaldo() 
+    {
+        return "Seu saldo é: R$ {$this->saldo}\n";
+    }
+
+    public function depositar($valor)
+    {
+        $this->saldo += $valor;
+        return "Depósito de R$ {$valor} realizado!\n";
+    }
+
+    public function sacar($valor)
+    {
+        $this->saldo -= $valor;
+        return "Saque de R$ {$valor} realizado!\n";
     }
 }
 
@@ -30,4 +43,8 @@ $conta = new ContaBancaria(
     300.00
 );
 
+echo $conta->obterSaldo();
+echo $conta->depositar(100);
+echo $conta->obterSaldo();
+echo $conta->sacar(30);
 echo $conta->obterSaldo();
