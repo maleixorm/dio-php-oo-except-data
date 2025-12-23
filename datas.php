@@ -7,4 +7,4 @@ echo "<pre>";
 var_dump($data) . "<br>" . PHP_EOL;
 echo "</pre>";
 
-echo $data->format('d/m/Y') . "<br>" . PHP_EOL;
+echo $data->format('d/m/Y H:i:s') . "<br>" . PHP_EOL;
